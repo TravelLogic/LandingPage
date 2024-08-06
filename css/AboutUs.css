@@ -1,0 +1,267 @@
+/* About Section */
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Uniform padding */
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 32px;
+    /* Consistent with Airbnb's main headings */
+    font-weight: 500;
+    /* Bold */
+    color: #000;
+}
+
+.about p {
+    font-size: 16px;
+    font-weight: 300;
+    /* Standard body text size */
+    color: #555;
+    /* Consistent spacing */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    border-radius: 12px;
+    /* Consistent spacing */
+    object-fit: cover;
+}
+
+/* Hover effect for images */
+.feature-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Our Features Section */
+.discover-features {
+    max-width: 1200px;
+    /* Match the width of Our Promise section */
+    margin: 0 auto;
+    /* Center align */
+    text-align: left;
+    /* Center the text */
+}
+
+.discover-features h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+
+.discover-features .subtitle {
+    font-size: 18px;
+    color: #717171;
+}
+
+
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    /* Adjust the gap between items */
+    max-width: 1200px;
+    /* Match the max-width */
+    margin: 0 auto;
+    /* Center align the grid */
+}
+
+.feature-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+/* Wrapper for the image with rounded corners */
+.feature-image-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 100%;
+    /* This ensures a 1:1 aspect ratio for the wrapper */
+}
+
+/* Image with hover effect */
+.feature-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the image */
+.feature-image-wrapper:hover .feature-image {
+    transform: scale(1.05);
+    /* Enlarge the image slightly */
+}
+
+/* Feature content styling */
+.feature-content {
+    text-align: left;
+}
+
+.feature-content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.feature-content p {
+    font-size: 13px;
+    color: #717171;
+    margin-top: 0;
+}
+
+/* Our Promise Section */
+.our-promise {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 32px;
+    /* Reduced margin */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 42px 0;
+    /* Reduced padding */
+    position: relative;
+}
+
+.promise-content {
+    flex: 1;
+    padding: 32px;
+    /* Reduced padding */
+    z-index: 1;
+    position: relative;
+    color: #fff;
+}
+
+.promise-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    /* Reduced margin */
+}
+
+.promise-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* Reduced margin */
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.promise-image {
+    flex: 1;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/16253181/pexels-photo-16253181/free-photo-of-close-up-of-wet-from-rain-love-locks-on-a-bridge.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    /* Ensure the image is behind the text */
+}
+
+@media (max-width: 768px) {
+    .our-promise {
+        flex-direction: column;
+    }
+
+    .promise-content {
+        max-width: 100%;
+        padding: 48px 24px;
+    }
+
+    .promise-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    /* Ensure footer is fully visible */
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .discover-features {
+        padding: 32px 24px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .our-promise {
+        flex-direction: column;
+        padding: 48px 24px;
+    }
+
+    .promise-content {
+        padding-right: 0;
+        margin-bottom: 32px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2.5em;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

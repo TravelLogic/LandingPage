@@ -1,0 +1,99 @@
+/* Banner Styles */
+.faq-banner {
+    text-align: left;
+    padding: 50px 10%;
+    margin-bottom: 20px;
+}
+
+.faq-banner h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* FAQ Content */
+.faq-content {
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    margin: 0;
+}
+
+.faq-item p {
+    font-size: 1em;
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin: 0;
+}
+
+.faq-item.active p {
+    max-height: 200px;
+    /* Adjust as needed */
+    padding-top: 15px;
+}
+
+.faq-item h3::after {
+    content: '+';
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+    transform: rotate(45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-banner {
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    .faq-banner h1 {
+        font-size: 2em;
+    }
+
+    .faq-banner p {
+        font-size: 1em;
+    }
+
+    .faq-content {
+        padding: 0 10px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.2em;
+    }
+
+    .faq-item p {
+        font-size: 0.9em;
+    }
+}

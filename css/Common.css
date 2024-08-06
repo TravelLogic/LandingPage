@@ -1,0 +1,177 @@
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+}
+
+/* Logo Image */
+.logo-image {
+    width: 35px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Wrapper around the entire content */
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: white;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 5%;
+    background-color: white;
+    position: relative;
+    z-index: 100;
+    height: auto;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000000;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #000;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    z-index: 200;
+    /* Ensure it is above other elements */
+    flex-direction: column;
+    justify-content: space-between;
+    /* Space between items */
+    width: 24px;
+    height: 18px;
+    /* Reduced height for less vertical spacing */
+}
+
+.hamburger div {
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 1px;
+    transition: all 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 5%;
+        box-sizing: border-box;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 10px 5%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 5% 50%;
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 5% 50%;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    color: #666;
+}
+
+footer p {
+    margin: 0;
+}
