@@ -185,7 +185,7 @@
 .promise-image {
     flex: 1;
     height: 100%;
-    background-image: url('https://images.pexels.com/photos/16253181/pexels-photo-16253181/free-photo-of-close-up-of-wet-from-rain-love-locks-on-a-bridge.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-image: url('/Users/isabellexiong/Desktop/TravelLogic_LandingPage/LandingPage/assets/photos/promise-image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
